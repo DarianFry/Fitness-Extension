@@ -3,7 +3,7 @@ var DEFAULT_A1_AMPM = 0;
 var DEFAULT_A2_TT = '03:30';
 var DEFAULT_A2_AMPM = 1;
 var DEFAULT_RATE = 1.0;
-var DEFAULT_VOLUME = 1.0;
+var DEFAULT_VOLUME = 0.0;
 var DEFAULT_PHRASE = 'It\'s $TIME, time to stand up!';
 var DEFAULT_SOUND = 'ringing';
 
@@ -179,7 +179,7 @@ function createNotification(){
   var opt = {type: "basic", iconUrl: "dumbbell2.png", title:   "It is Time to Move!", message: "", buttons: [{title: "Continue to Workout"},], priority: 0}
   chrome.notifications.create("notificationName",opt,function(){});
 
-  setTimeout(function(){chrome.notifications.clear("notificationName",function(){});}, 10000);
+  setTimeout(function(){chrome.notifications.clear("notificationName",function(){});}, 20000);
 
   chrome.notifications.onButtonClicked.addListener(function() {
         window.open("exerciseSection/popup2.html");
