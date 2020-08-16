@@ -14,8 +14,10 @@
         }
 
         img {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding-top: 0px;
         }
 
         p {
@@ -26,18 +28,30 @@
         }
 
         #mytable,td{
-            width: 200px;
-            height: 100px;
+            width: 150px;
+            height: 145px;
             border:1px solid blue;
-    
+            word-wrap:break-word;
         }
+
+        td {
+            font-size: 14px;
+        }
+
+        th {
+            word-wrap:break-word;
+            font-size: 15px;
+        }
+
 
         span {
             font-family: Nova Mono;
         }
 
         table {
-           margin: 0 auto;            
+           table-layout: fixed;
+           margin: 0 auto;
+                       
         }​
 
         #timer {
@@ -62,9 +76,9 @@
     </div>
     
     <div class="row">
-    <div class="col-sm-12">
-        <table class="table"></table>
-    </div>
+     <div class="col-sm-12">
+          <table class="table"></table>
+     </div>
     </div>
   </div> 
 </body>

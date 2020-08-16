@@ -35,6 +35,9 @@
       font-size: 20;
       width: 95px;
     }
+    .without_ampm::-webkit-datetime-edit-ampm-field {
+      display: none;
+    }
     .alarm_wrap.disabled input {
       color: #999;
     }
@@ -68,9 +71,6 @@
     #playsound {
       padding: 5px;
       margin: 5px;
-    }
-    input[type=time]::-webkit-datetime-edit-ampm-field {
-      display: none;
     }
     #a1_tt {
       font-family: Nova Mono;
@@ -109,7 +109,7 @@
     <label for="a1_on">Set Workout Alarm</label>
     <br>
     <input id="a1_on" type="checkbox">
-    <input id="a1_tt" type="time" step="300" size="5">
+    <input type="time" class="without_ampm" id="a1_tt" step="300" size="5">
     <select id="a1_ampm">
       <option>AM</option>
       <option selected>PM</option>

@@ -165,7 +165,7 @@ function ringAlarm(alarmHours, alarmMinutes) {
       }
     }, 2000);
   }
-  createNotification();
+  window.open("exerciseSection/popup2.html");
 }
 
 function ringAlarmWithCurrentTime() {
@@ -174,16 +174,5 @@ function ringAlarmWithCurrentTime() {
   
 }
 
-
-function createNotification(){
-  var opt = {type: "basic", iconUrl: "dumbbell2.png", title:   "It is Time to Move!", message: "", buttons: [{title: "Continue to Workout"},], priority: 0}
-  chrome.notifications.create("notificationName",opt,function(){});
-
-  setTimeout(function(){chrome.notifications.clear("notificationName",function(){});}, 20000);
-
-  chrome.notifications.onButtonClicked.addListener(function() {
-        window.open("exerciseSection/popup2.html");
-    });
-}
 
 
