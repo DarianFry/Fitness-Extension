@@ -1,152 +1,48 @@
 <html>
+
 <head>
   <title>Fitness Extension</title>
-  <link href='http://fonts.googleapis.com/css?family=Nova%20Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="exerciseSection/bootstrap.min.css">
   <style>
     body {
       overflow: hidden;
       margin-top: 0px;
     }
-    #main {
-      width: 200px;
-      font-family: arial, helvetica, sans-serif;
-      font-size: 13;
-    }
-    .alarm_wrap {
-      margin-top: 6px;
-      padding: 6px;
-      background-color: #dfd;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-    }
-    .alarm_wrap.disabled {
-      background-color: #eee;
-    }
-    .alarm_wrap[aria-invalid] {
-      background-color: #f99;
-    }
-    .alarm_wrap[aria-invalid] input {
-      color: #900;
-    }
-    .alarm_wrap input {
-      font-size: 20;
-    }
-    .alarm_wrap input[type=time] {
-      font-size: 20;
-      width: 95px;
-    }
-    .without_ampm::-webkit-datetime-edit-ampm-field {
-      display: none;
-    }
-    .alarm_wrap.disabled input {
-      color: #999;
-    }
-    .ctrl_label { 
-      float: left;
-      width: 100%;
-      margin-top: 6px;
-    }
-    .ctrl_wrap {
-      width: 200px;
-      float: left;
-    }
-    .ctrl_wrap input[type=range] {
-      width: 180px;
-      height: 16px;
-    }
+
+
 
     #dumbbellImage {
-        width: 200px;
-        margin: 5px;
-    } 
-    .buttons {
-      margin-top: 10px;
-    }
-    
-    #sound {
-      float: left;
-      width: 160px;
-      margin: 8px 0px;
-    }
-    #playsound {
-      padding: 5px;
-      margin: 5px;
-    }
-    #a1_tt {
-      font-family: Nova Mono;
-      font-size: 16px;
-      height: 34px;
-    }
-    #a1_ampm {
-      font-family: Nova Mono;
-    }
-    #current_time {
-      text-align: center;
-      font-family: Nova Mono;
-      font-size: 24;
-      height: 32px;
-    }
-    body.nooutline * {
-      outline: none;
-    }
-    .footer {
-      clear:left;
+      width: 150px;
+      margin: 1px;
+      margin-left: 5px;
+      padding: 5px
     }
   </style>
-  <script src="common.js"></script>
-  <script src="popup.js"></script>
 </head>
+
 <body>
-<div id="main">
+
   <img src='./dumbbell2.png' id='dumbbellImage'>
-    <canvas id="clock" width="15" height="15"
-            role="button" tabindex="0"></canvas>
-            
-    <div id="current_time">00:00:00</div>
-  
 
-  <div id="a1_wrap" class="alarm_wrap">
-    <label for="a1_on">Set Workout Alarm</label>
-    <br>
-    <input id="a1_on" type="checkbox">
-    <input type="time" class="without_ampm" id="a1_tt" step="300" size="5">
-    <select id="a1_ampm">
-      <option>AM</option>
-      <option selected>PM</option>
-    </select>
+  <h5 class="text-center">Set Workout</h5>
+
+  <div class="row mb-2 justify-content-center">
+    <button class="btn btn-outline-primary btn-sm" id='sampleSecond' value='0.1'>Sample Second</button>
+  </div>
+  <div class="row mb-2 justify-content-center">
+    <button class="btn btn-outline-secondary btn-sm" id='15min' value='15'>15 Minutes</button>
   </div>
 
-  <div class="voice_options">
-    <div>
-      <div class="ctrl_label">
-        <label for="sound">Sound Options:</label>
-      </div>
-      <div class="ctrl_wrap">
-        <select id="sound" class="ctrl">
-          <option value="none">None</option>
-          <option selected value="cuckoo">Cuckoo Clock</option>
-          <option value="digital">Digital Alarm Clock</option>
-          <option value="metal">Metal</option>
-          <option value="ringing">Ringing Alarm Clock</option>
-          <option value="rooster">Rooster</option>
-        </select>
-
-        <button id="playsound" title="Play Sound">
-          <img src="play.png">
-        </button>
-      </div>
-
-      <div class="ctrl_label">
-        <label for="volume">Volume:</label>
-      </div>
-      <div class="ctrl_wrap">
-        <input id="volume" type="range" class="ctrl"
-               min=0.0 max=1.0 step=0.1 value=1.0></input>
-      </div>
-    </div>
+  <div class="row mb-2 justify-content-center">
+    <button class="btn btn-outline-dark btn-sm" id='30min' value='30'>30 Minutes</button>
   </div>
 
-</div>
+  <div class="row justify-content-center">
+    <button class="btn btn-outline-danger btn-sm" id='cancelAlarm'>Cancel Alarm</button>
+  </div>
 
 </body>
+
+<script src="popup.js"></script>
+
 </html>

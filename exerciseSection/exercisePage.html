@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="p5.sound.min.js"></script>
+    <script language="javascript" type="text/javascript" src="timer.js"></script>
+    <style>
+        h4 {
+            text-align: left;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            text-align: center;
+            font-style: Stencil Std, fantasy;
+            font-size: 35px;
+            text-decoration: underline;
+        }
+
+        #mytable,
+        td {
+            width: 150px;
+            height: 145px;
+            border: 1px solid;
+            word-wrap: break-word;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        th {
+            word-wrap: break-word;
+            font-size: 15px;
+        }
+
+        span {
+            font-family: Nova Mono;
+        }
+
+        table {
+            table-layout: fixed;
+            margin: 0 auto;
+        }
+
+        ​ #timer {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <b>
+                    <p>Time Left: <span id="timer"></span></p>
+                </b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Do these four exercises in rotation until the timer runs out <b style="color: teal">Ready...Go!</b>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table" id="thetable"></table>
+            </div>
+        </div>
+    </div>
+</body>
+<script language="javascript" type="text/javascript" src="exerciseSelection.js"></script>
+
+</html>

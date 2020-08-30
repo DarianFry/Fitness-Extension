@@ -37,7 +37,6 @@ function setup() {
     if (currentTime == timeleft) {
       alarm.play();
       clearInterval(interval);
-      //counter = 0;
     }
   }
 }
